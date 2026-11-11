@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import wall from "../../assets/images/wall.png";
 import self from "../../assets/images/self.jpeg";
 
 const Hero = () => {
     return (
         <section
-            className="relative min-h-screen bg-cover bg-center bg-no-repeat "
+            className="relative min-h-screen bg-cover bg-center bg-no-repeat"
             style={{
                 backgroundImage: `url(${wall})`,
             }}
@@ -17,42 +18,43 @@ const Hero = () => {
                         Full Stack Developer
                     </span>
 
-                    <h1 className="mt-15  text-5xl font-bold leading-tight sm:text-6xl md:text-7xl lg:text-6xl mb-10 text-[#ACC5A6]">
+                    <h1 className="mt-10 mb-10 text-5xl font-bold leading-tight text-[#ACC5A6] sm:text-6xl md:text-7xl lg:text-6xl">
                         AmirAli
                         <br />
                         Rezaei
                     </h1>
 
-                    <p className="mt-20 max-w-xl text-base leading-7 text-zinc-400 md:text-lg lg:mx-0">
-                        I build modern, scalable and user-focused web
-                        applications using React, Node.js, Express and
-                        PostgreSQL.
+                    <p className="max-w-xl text-base leading-7 text-zinc-400 md:text-lg">
+                        I build modern, scalable and user-focused web applications
+                        using React, Node.js, Express and PostgreSQL.
                     </p>
 
-                    <div className="mt-8 flex flex-col gap-4 sm:flex-row lg:justify-start">
-                        <a
-                            href="/projects"
-                            className="rounded-xl bg-[#ACC5A6] px-8 py-4 text-center font-semibold text-black transition hover:opacity-90"
-                        >
-                            View Projects
-                        </a>
+                    <div className="mt-8 w-full sm:w-[424px]">
+                        <div className="flex flex-col gap-4 sm:flex-row">
+                            <Link
+                                to="/projects"
+                                className="flex-1 rounded-xl bg-[#ACC5A6] px-8 py-4 text-center font-semibold text-black transition hover:opacity-90"
+                            >
+                                View Projects
+                            </Link>
+
+                            <Link
+                                to="/contact"
+                                className="flex-1 rounded-xl border border-white px-8 py-4 text-center font-semibold text-white transition hover:bg-white hover:text-black"
+                            >
+                                Contact Me
+                            </Link>
+                        </div>
 
                         <a
-                            href="/contact"
-                            className="rounded-xl border border-white px-8 py-4 text-center font-semibold text-white transition hover:bg-white hover:text-black"
+                            href="/cv.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-4 block w-full rounded-xl bg-[#E5D3AF] px-8 py-4 text-center font-semibold text-black transition hover:bg-white"
                         >
-                            Contact Me
+                            View CV
                         </a>
                     </div>
-                    <a
-                        href="/cv.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="rounded-xl border px-8 py-4 text-center font-semibold text-black bg-[#E5D3AF] transition hover:bg-white hover:text-black mt-3 w-84"
-                    >
-                        View CV
-                    </a>
-
                 </div>
 
                 <div className="mb-10 flex w-full justify-center lg:mb-0 lg:w-1/3">
